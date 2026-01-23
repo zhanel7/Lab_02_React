@@ -1,45 +1,255 @@
-.App {
+/* App.css для Task 2 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 1000px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.appContainer {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.section-title {
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
+.appHeader {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Стили для Section */
+.sectionTitle {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 25px;
   padding-bottom: 10px;
+  border-bottom: 3px solid #667eea;
 }
 
+.sectionContent {
+  margin-bottom: 40px;
+}
+
+/* Стили для Card */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.card h3 {
-  margin-top: 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border-color: #667eea;
+}
+
+.cardTitle {
   color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
-.product-list {
+.cardContent {
+  color: #555;
+}
+
+/* ProductList стили */
+.productsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
 }
 
-.product-card {
-  background-color: #ecf0f1;
+.productCard {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.highlighted {
-  background-color: #fff3cd;
-  border-color: #ffeaa7;
+.productPrice {
+  font-size: 1.3rem;
+  color: #27ae60;
+  margin: 10px 0;
 }
 
-.section-content {
-  margin: 20px 0;
+.productCategory {
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.productId {
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.addButton {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background: linear-gradient(to right, #5a67d8, #6b46c1);
+  transform: scale(1.05);
+}
+
+.totalProducts {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Примеры карточек */
+.cardExamples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.textCard {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.actionCard {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.actionCard .cardTitle {
+  color: white;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  background: white;
+  color: #f5576c;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.infoCard {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.infoCard .cardTitle {
+  color: white;
+}
+
+.infoList {
+  list-style: none;
+}
+
+.infoList li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Демо фрагментов */
+.fragmentDemo {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+}
+
+.codeExample {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+/* Футер */
+.appFooter {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, #2c3e50, #4a6491);
+  border-radius: 15px;
+  color: white;
+  margin-top: 40px;
+}
+
+.requirements {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .appContainer {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardExamples {
+    grid-template-columns: 1fr;
+  }
 }
